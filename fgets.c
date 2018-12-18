@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#define MAXLINE 1000
+#define MAXLINE 40
 #define NEWLINE '\n'
 
 struct student
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     FILE *outptr = fopen(outfile, "w");
 
     //read file content until the end of file(eof)
-    while(fgets(line, 1000, inptr) != NULL)
+    while(fgets(line, MAXLINE, inptr) != NULL)
     {
         printf("%s", line);
         fwrite(line, strlen(line), 1, outptr);
