@@ -1,2 +1,2 @@
 # demo
-A demo of functions in c
+## A demo of simple examples in different languages
