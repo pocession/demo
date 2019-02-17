@@ -1,3 +1,6 @@
+# An example for using python to write json data
+# The app cannot be name jason.py or otherwise there will be some errir
+
 import json
 data = [{
   "orderID": 12345,
