@@ -1,6 +1,7 @@
 # A python app to show how to use jQuery
 
 from flask import Flask, render_template, request, jsonify
+import json
 
 app = Flask(__name__)
 
@@ -17,4 +18,7 @@ def index():
 def search():
     q = request.args.get("q")
     words = [word for word in WORDS if q and word.startswith(q)]
+    data = json.dumps(words)
+    print("data you are returning are: ")
+    print(data)
     return jsonify(words)
